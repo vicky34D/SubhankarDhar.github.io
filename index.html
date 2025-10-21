@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subhankar Dhar - Portfolio</title>
+  <meta name="description" content="Personal portfolio of Subhankar Dhar, a Cloud & Generative AI Enthusiast." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background-color: #ffffff; 
+      color: #212529;
+    }
+    .accent-color { color: #007bff; }
+    .secondary-color { color: #6c757d; }
+    .cta-button {
+      background-color: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      font-weight: 500;
+    }
+    .cta-button:hover {
+      background-color: #007bff;
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #343a40;
+      margin-bottom: 2rem;
+    }
+    .section-heading::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 1px;
+      width: 200px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: #dee2e6;
+    }
+    .card-hover {
+      background-color: #ffffff;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .typing-cursor {
+        border-right: 2px solid #007bff;
+        animation: blink 0.7s steps(1) infinite;
+    }
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+    .section-bg-light {
+        background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-opacity-80 backdrop-blur-md" style="background-color: rgba(255, 255, 255, 0.85); border-bottom: 1px solid #e9ecef;">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#home" class="text-2xl font-bold accent-color">SD</a>
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="#about" class="text-gray-700 hover:text-[#007bff] transition">About</a>
+      <a href="#experience" class="text-gray-700 hover:text-[#007bff] transition">Experience</a>
+      <a href="#skills" class="text-gray-700 hover:text-[#007bff] transition">Skills</a>
+      <a href="#contact" class="text-gray-700 hover:text-[#007bff] transition">Contact</a>
+    </div>
+    <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white">
+    <a href="#about" class="block py-2 text-gray-700 hover:text-[#007bff]">About</a>
+    <a href="#experience" class="block py-2 text-gray-700 hover:text-[#007bff]">Experience</a>
+    <a href="#skills" class="block py-2 text-gray-700 hover:text-[#007bff]">Skills</a>
+    <a href="#contact" class="block py-2 text-gray-700 hover:text-[#007bff]">Contact</a>
+  </div>
+</header>
+
+<main class="container mx-auto px-6">
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center pt-24 pb-16">
+    <div>
+      <p class="accent-color text-lg mb-4">Hi, my name is</p>
+      <h1 class="text-4xl md:text-7xl font-extrabold text-gray-900">Subhankar Dhar.</h1>
+      <h2 class="text-3xl md:text-5xl font-extrabold secondary-color mt-2">I build things for the cloud.</h2>
+      <p class="text-lg secondary-color mt-6 max-w-xl">I'm a <span class="accent-color" id="typing-text"></span><span class="typing-cursor"></span> with a passion for designing and building scalable, secure, and cost-effective cloud solutions.</p>
+      <div class="mt-8 space-x-4">
+        <a href="mailto:vdhar29@gmail.com" class="cta-button">Email Me</a>
+        <a href="subhankar_dhar_2cv.pdf" download="Subhankar_Dhar_CV.pdf" class="cta-button">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 fade-in-section section-bg-light -mx-6 px-6">
+    <div class="container mx-auto">
+        <h2 class="section-heading">About Me</h2>
+        <div class="grid md:grid-cols-5 gap-10 items-center">
+            <div class="md:col-span-3 text-lg secondary-color space-y-4">
+                <p>
+                    As a passionate Cloud Computing enthusiast, I hold multiple <span class="text-gray-800 font-medium">Oracle Cloud Infrastructure (OCI) certifications</span> that have provided me with a strong foundation in cloud architecture, networking, compute, storage, and automation. My journey in tech is driven by a curiosity to solve complex problems and build efficient systems.
+                </p>
+                <p>
+                    I am actively expanding my expertise into <span class="text-gray-800 font-medium">Generative AI</span>, exploring LLM integrations, AI cloud deployments, and AI-driven automation workflows. My goal is to merge the power of cloud infrastructure with artificial intelligence to create innovative and intelligent solutions.
+                </p>
+                <p>Here are a few technologies I've been working with recently:</p>
+                <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>OCI & Cloud Architecture</li>
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>Generative AI & LLMs</li>
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>Kubernetes (OKE)</li>
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>Docker</li>
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>Terraform & Ansible</li>
+                    <li class="flex items-center"><span class="accent-color mr-2">▹</span>CI/CD Pipelines</li>
+                </ul>
+            </div>
+            <div class="md:col-span-2">
+                <div class="w-full max-w-sm mx-auto rounded-lg border-4 border-blue-200 group shadow-lg">
+                    <img src="https://placehold.co/500x500/ffffff/333333?text=Subhankar" alt="Subhankar Dhar" class="rounded-md transition duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section id="experience" class="py-24 fade-in-section">
+    <h2 class="section-heading">Where I've Worked</h2>
+    <div class="max-w-3xl space-y-8">
+        <div class="p-6 rounded-lg card-hover">
+            <h3 class="text-xl font-bold text-gray-900">Cloud Administrator <span class="accent-color">@ Multitech Solutions</span></h3>
+            <p class="secondary-color text-sm mb-4">Sep 2025 - Present</p>
+            <ul class="space-y-2 text-base secondary-color">
+                <li class="flex"><span class="accent-color mr-3 mt-1">▹</span>Assisted in the deployment, configuration, and maintenance of Microservices and API deployments using Kubernetes.</li>
+                <li class="flex"><span class="accent-color mr-3 mt-1">▹</span>Managed user access and implemented robust IAM policies to enhance security and compliance across the cloud environment.</li>
+            </ul>
+        </div>
+        <div class="p-6 rounded-lg card-hover">
+            <h3 class="text-xl font-bold text-gray-900">Executive <span class="accent-color">@ Flipkart</span></h3>
+            <p class="secondary-color text-sm mb-4">Nov 2023 - Dec 2024</p>
+            <ul class="space-y-2 text-base secondary-color">
+                <li class="flex"><span class="accent-color mr-3 mt-1">▹</span>Managed daily logistics and supply chain operations, ensuring timely deliveries and coordinating with partners.</li>
+                <li class="flex"><span class="accent-color mr-3 mt-1">▹</span>Maintained and updated Logistics Management System (LMS) and generated operational reports for management.</li>
+            </ul>
+        </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 fade-in-section section-bg-light -mx-6 px-6">
+    <div class="container mx-auto">
+        <h2 class="section-heading">My Skills & Certifications</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg card-hover">
+            <h3 class="font-semibold text-gray-900 text-xl mb-2">Cloud Infrastructure</h3>
+            <p class="secondary-color">Expertise in OCI services including Kubernetes Clusters (OKE), PowerShell, Terraform, Ansible, Docker, IAM, VCN, and Load Balancers.</p>
+          </div>
+          <div class="p-6 rounded-lg card-hover">
+            <h3 class="font-semibold text-gray-900 text-xl mb-2">Generative AI</h3>
+            <p class="secondary-color">Deep understanding of Pre-trained Foundational Models, Fine-tuning techniques, Model Inference, and Generative AI Security architecture.</p>
+          </div>
+          <div class="p-6 rounded-lg card-hover">
+            <h3 class="font-semibold text-gray-900 text-xl mb-2">Certifications</h3>
+            <ul class="secondary-color space-y-1 mt-2">
+                <li>OCI Generative AI Professional</li>
+                <li>OCI Architect Associate</li>
+                <li>OCI Foundations Associate</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 text-center fade-in-section">
+    <h2 class="text-2xl font-semibold accent-color mb-2">What's Next?</h2>
+    <h3 class="text-4xl font-extrabold text-gray-900 mb-4">Get In Touch</h3>
+    <p class="secondary-color max-w-xl mx-auto mb-8">
+        I'm currently seeking new opportunities to work on AI-enabled cloud deployments and grow as a Cloud + AI Solutions Architect. Whether you have a question or just want to say hi, my inbox is always open!
+    </p>
+    <a href="mailto:vdhar29@gmail.com" class="cta-button">Say Hello</a>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-6 text-center secondary-color text-sm border-t border-gray-200">
+  <div class="flex justify-center space-x-6 my-4">
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#007bff] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#007bff] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><title>LinkedIn</title><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </a>
+  </div>
+  <p>Designed & Built by Subhankar Dhar</p>
+</footer>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Fade-in sections on scroll
+  const sections = document.querySelectorAll('.fade-in-section');
+  const options = {
+    threshold: 0.15,
+  };
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // Typing animation
+    const typingTextElement = document.getElementById('typing-text');
+    const textToType = "Cloud & Generative AI Enthusiast";
+    let index = 0;
+
+    function type() {
+        if (index < textToType.length) {
+            typingTextElement.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, 100);
+        } else {
+            // Optional: Reset and re-type
+            setTimeout(() => {
+                typingTextElement.textContent = '';
+                index = 0;
+                type();
+            }, 3000);
+        }
+    }
+    document.addEventListener('DOMContentLoaded', type);
+</script>
+
+</body>
+</html>
+
